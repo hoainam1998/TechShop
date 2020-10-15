@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet');
+
+*,*:before,*:after {
+    padding: 0; margin: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;;
+}
+
+/*====================================
+        Header Dashboard
+====================================*/
+.headerDashboard {
+    padding: .8rem 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentDashboard {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 15% 84%;
+    padding: 0 .7rem;
+}
+
+.tables {
+    background: #2c3e50;
+} 
+
+.tables li a{
+    display: block;
+    padding: .8rem .5rem;
+    color: white;
+}
+
+.tables li a::before {
+    font-family: 'FontAwesome';
+    content: '\f0ce';
+    margin-right: .5rem;
+}
+
+.tables li {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.tables li:hover {
+    background: #34495e;
+}
+
+.search button {
+    padding: .3rem;
+    border: none;
+    font-size: 16px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.search input {
+    padding: .3rem;
+    border: none;
+    border-bottom: 1.5px solid black;
+    outline: none;
+    font-size: 15px;
+    width: 250px;
+}
+
+.deleteAll {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.deleteAll input {
+    width: 17px;
+    height: 17px;
+}
+
+.deleteAll i {
+    cursor: pointer;
+}
+
+.deleteAll span {
+    font-weight: bold;
+    margin: 0 .5rem;
+}
+
+.user {
+    font-size: 18px;
+}
+
+.user i {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #2c3e50;
+    text-align: center;
+    padding-top: .3rem;
+    border-radius: 50%;
+    color: white;
+}
+
+/*====================================
+        Header Dashboard
+====================================*/
+
+/*====================================
+        Control Data
+====================================*/
+.controlData {
+    border: 1.5px solid #ebebeb;
+}
+
+.listData >li {
+    padding: .3rem 0;
+    cursor: pointer;
+}
+
+.listData li:hover {
+    background: #ecf0f1;
+}
+
+.listFieldName {
+    background: #2c3e50;
+    padding: .5rem 0;
+    color: white;
+}
+
+.listFieldName li{
+    font-weight: bold;
+}
+
+.listField,.listFieldName {
+    display: grid;
+    grid-template-columns: 100px repeat(5,1fr);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.listField li img {
+    width: 50px;
+    height: 50px;
+}
+/*====================================
+        End Control Data
+====================================*/
+/*====================================
+        Detail Item Data
+====================================*/
+.detailItemData {
+    position: fixed;
+    width: 90%; height: 93%;
+    top: 50%; left: 50%;
+    z-index: 1;
+    background: pink;
+    padding: 1rem 0;
+    transform: translate(-50%,-50%);
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+}
+
+.detailItemData .listInput{
+    width: 95%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 15% 34% 34% 15%;
+    grid-gap: 10px;
+}
+
+.listInput input {
+    padding: .7rem;
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+}
+
+.listInput input[type="file"] {
+    padding: .5rem;
+}
+
+.listInput label {
+    display: block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.styleOfList li {
+    padding: .3rem 0;
+    font-size: 14px;
+}
+
+.styleOfList li::before {
+    content: '';
+    background: url('../images/check@2x.png') no-repeat;
+    background-size: 100% 100%;
+    width: 14px; height: 14px;
+    float: left;
+    margin-right: .5rem;
+}
+
+.listDiscountGift {
+    height: 180px;
+    overflow-y: scroll;
+}
+
+.listDiscountGift li {
+    padding: .3rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.listDiscountGift li img{
+    width: 50px;
+    height: 50px;
+    margin-right: .5rem;
+}
+/*====================================
+    End Detail Item Data
+====================================*/
+
+/*====================================
+        List Hinh Anh
+====================================*/
+
+.listHinhAnh {
+    margin: .5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    grid-auto-rows: 125px;
+}
+
+.listHinhAnh li {
+    position: relative;
+}
+
+.listHinhAnh li img {
+    width: 100%;
+    height: 100%;
+}
+
+.listHinhAnh span {
+    position: absolute;
+    bottom: -5px; right: 2px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #dfe6e9;
+    text-align: center;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+/*====================================
+    End List Hinh Anh
+====================================*/
+
+/*====================================
+        Buttons Control Form
+====================================*/ 
+
+.btns_controlForm {
+    padding-top: 1.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btns_controlForm button {
+    padding: 0 .5rem;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background: #1e90ff;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    font-weight: bold;
+    outline: none;
+}
+
+.btns_controlForm button:first-child::before {
+    content: '\f00c';
+    font-family: 'FontAwesome';
+    margin-right: .5rem;
+}
+
+.btns_controlForm button:last-child::before {
+    content: '\f00d';
+    font-family: 'FontAwesome';
+    margin-right: .5rem;
+}
+
+.groupInputFile_btnAdd {
+    display: flex;
+    align-items: center;
+}
+
+.groupInputFile_btnAdd i {
+    font-size: 30px;
+    margin-left: 10px;
+    color: #2ecc71;
+    cursor: pointer;
+}
+/*====================================
+    End Buttons Control Form
+====================================*/
+
+.add {
+    padding: .5rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: #2ecc71;
+    border-radius: 5px;
+    color: white;
+    margin: .3rem 0;
+    cursor: pointer;
+}
+
+.fa-times-circle {
+    margin-left: .4rem;
+    cursor: pointer;
+}
+
+.warning {
+    display: none;
+}
+
+@media(max-width:1020px){
+    .warning {
+        display: block;
+    }
+
+    .container {
+        display: none;
+    }
+}
+
+

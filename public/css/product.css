@@ -1,0 +1,370 @@
+/*======================================
+        Product Qick Infor
+======================================*/
+
+.containerProductInfor {
+    display: grid;
+    grid-template-columns: 37.5% 30% 30%;
+    grid-gap: 15px;
+}
+
+.containerProductInfor > div {
+    padding: 1rem;
+}
+
+.nameProduct {
+    font-weight: 400;
+    border-bottom: 1.5px solid #ebebeb;
+    padding: .5rem 0;
+}
+
+.listPrice {
+    display: flex;
+    align-items: center;
+    margin-bottom: .8rem;
+}
+
+.listPrice .newPrice {
+    font-size: 18px;
+}
+
+.listPrice .oldPrice {
+    font-size: 12px;
+}
+
+.discount {
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+}
+
+.headDiscount {
+    background-color: #f6f6f6;
+    padding: .5rem .7rem;
+    border-bottom: 1.5px solid #ebebeb;
+}
+
+.headDiscount h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.headDiscount span {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.3rem;
+}
+
+.listDiscount {
+    padding: .5rem 0;
+    border-bottom: 1.5px dashed #ebebeb;
+}
+
+.listDiscount li {
+    font-size: 14px;
+    padding: .3rem 0;
+    padding-left: 1rem;
+    color: #333;
+}
+
+.listDiscount li::before {
+    content: '';
+    background: url('../images/check@2x.png');
+    background-size: 14px 14px;
+    width: 14px;
+    height: 14px;
+    float: left;
+    margin-right: .5rem;
+}
+
+.discountGift {
+    padding: .5rem;
+}
+
+.discountGift h5 {
+    margin-bottom: .5rem;
+    font-weight: 400;
+    color: #666;
+}
+
+.listDiscountGift {
+    display: flex;
+    align-items: center;
+}
+
+.listDiscountGift li {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+.listDiscountGift img {
+    width: 50px;
+    height: 50px;
+    margin-right: .3rem;
+}
+
+.listDiscountGift li a {
+    color: var(--linkcolor);
+}
+
+.buyNow {
+    display: block;
+    padding: .6rem 0;
+    text-align: center;
+    border-radius: 4px;
+    margin: .5rem auto;
+    text-transform: uppercase;
+    color: white;
+    background: var(--linkcolor);
+}
+
+.listService {
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+    padding: .5rem;
+    font-size: 14px;
+    margin: .5rem 0;
+}
+
+.listService li::after  {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.listService li {
+    padding: .3rem 0;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.listService li:last-child {
+    border: none;
+}
+
+.listService li a {
+    color: var(--linkcolor);
+    font-size: 14px;
+}
+
+.listService li::before {
+    content: '';
+    width: 30px; height: 25px;
+    float: left;
+}
+
+.listService li:first-child::before {
+    background: url('../images/trong-hop-co@2x.png') no-repeat;
+    background-size: 20px 17px;
+}
+
+.listService li:nth-child(2)::before {
+    background: url('../images/bao-hanh-chinh-hang@2x.png') no-repeat;
+    background-size: 17px 17px;
+} 
+
+.listService li:nth-child(3)::before {
+    background: url('../images/1-doi-1@2x.png') no-repeat;
+    background-size: 17px 17px;
+} 
+
+.featureproduct {
+    padding: .5rem 0;
+}
+
+.featureproduct h4 {
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem;
+}
+
+.listFeature li {
+    display: flex;
+    padding: .7rem 0;
+    font-size: 14px;
+    border-top: 1px solid #ebebeb;
+    color: #666;
+}
+
+.listFeature li span {
+    display: block;
+}
+
+.listFeature li span:first-child {
+    width: 40%;
+}
+
+.listFeature li span:last-child {
+    width: 60%;
+}
+
+/*============================================
+            Product Description
+============================================*/
+
+.productDescription_relatedProduct {
+    display: flex;
+    margin: 1rem 0;
+}
+
+.productDescription {
+    width: 60%;
+    padding: 0 .5rem;
+}
+
+.productDescription h4 {
+    position: relative;
+    text-align: center;
+}
+
+.productDescription span {
+    padding: 0 .5rem;
+    background: white;
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.productDescription h4::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background: #666;
+    z-index: -1;
+}
+
+.contentDescription {
+    height: 1040px;
+    overflow: hidden;
+}
+
+.showContentDescription {
+    height: auto;
+    overflow: visible;
+}
+
+.contentDescription {
+    margin: 1rem auto;
+}
+
+.relatedProduct {
+    width: 40%;
+    padding: 0 .5rem;
+}
+
+/* .contentRelatedProduct {
+    height: 500px;
+} */
+
+.relatedProduct h3 {
+    border-bottom: 1.5px solid black;
+    font-weight: 400;
+    padding: .5rem 0; 
+}
+
+.showMore {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: var(--linkcolor);
+}
+
+.showMore i {
+    font-size: 24px;
+    line-height: 12px;
+    margin-left: .2rem;
+}
+
+.showMore::before {
+    content: -webkit-gradient(linear,0% 100%,0% 0%,from(#fff),color-stop(.2,#fff),to(rgba(255,255,255,0)));
+    display: block;
+    height: 55px;
+    width: 100%;
+    position: absolute;
+    top: -70px; left: 0;
+    z-index: 1;
+}
+
+.buyNow2 {
+    display: block;
+    margin: .6rem auto;
+    padding: .5rem 0;
+    width: 200px;
+    border: 1.5px solid var(--linkcolor);
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    color: var(--linkcolor);
+    text-transform: uppercase;
+}
+
+.contentRelatedProduct .listProduct {
+    grid-template-columns: repeat(2,50%);
+    grid-auto-rows: 490px;
+}
+
+.contentRelatedProduct .listProduct li {
+    overflow: hidden;
+}
+
+/*============================================
+        End Product Description
+============================================*/
+
+@media(max-width: 768px){
+    .containerProductInfor{
+        grid-gap: 0;
+    }
+
+    .containerProductInfor > div {
+        padding: .5rem;
+    }
+
+    .contentRelatedProduct .listProduct img {
+        width: 140px;
+    }
+
+    .nameProduct {
+       margin: 0 .5rem;
+    }
+}
+
+@media(max-width: 767px){
+     .containerProductInfor{
+        grid-template-areas: 'img '
+                             'name-price-discount'
+                             'feature';
+        grid-template-columns: 1fr;                     
+    } 
+
+    .productCollection {
+        grid-area: img;
+    }
+
+    .productName_Price_Discount_Service {
+        grid-area: name-price-discount;
+    }
+
+    .featureproduct {
+        grid-area: feature;
+    }
+
+    .nameProduct {
+        font-size: 17px;
+    }
+
+    .productDescription_relatedProduct {
+        flex-direction: column;
+    }
+
+    .productDescription_relatedProduct div {
+        width: 100%;
+    }
+
+    .contentRelatedProduct .listProduct {
+        grid-auto-rows: 400px;
+    }
+}

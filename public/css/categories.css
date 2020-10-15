@@ -1,0 +1,95 @@
+/*========================================
+            Banner
+========================================*/
+.bannerCategories {
+    display: grid;
+    grid-template-columns: 70% 29%;
+    grid-template-rows: repeat(2,80px);
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.bannerCategories img {
+    height: 100%;
+    width: 100%;
+}
+
+.mainBannerCategories {
+    grid-column: 1;
+    grid-row: 1/3;
+}
+
+.chilBannerCategoriesOne {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.chilBannerCategoriesTwo {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.bannerCategories .owl-dots {
+    margin-top: 0 !important;
+}
+
+.bannerCategories .owl-dots button span {
+    width: 7px !important; height: 7px !important;
+}
+
+.bannerCategories .owl-dots .active span {
+    background: var(--iconcolor) !important;
+}
+
+/*========================================
+        End Banner
+========================================*/
+
+/*========================================
+        Load More
+========================================*/
+.loadMore {
+    display: block;
+    padding: 0 1rem;
+    height: 40px;
+    border: 1.5px solid #3498db;
+    border-radius: 4px;
+    background: white;
+    margin: 1rem auto;
+    cursor: pointer;
+    color: #3498db;
+}
+/*========================================
+        End Load More
+========================================*/
+
+@media (max-width:767px) {
+    .priceAndFilter_Sort {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas:'pricerange pricerange pricerange'
+                            'filter sort sort';
+    }
+
+    .listPriceRange { grid-area: pricerange; }
+
+    .filter { grid-area: filter; }
+
+    .sort { grid-area: sort;}
+
+    .bannerCategories {
+         grid-template-columns: 100%;
+         padding: .3rem 0;;
+    }
+
+    .chilBannerCategoriesOne,.chilBannerCategoriesTwo {
+        display: none;
+    }
+
+    .listBrand li img {
+        width: 90px;
+    }
+
+    /* .listFilter {
+        left: 0;
+    } */
+}
