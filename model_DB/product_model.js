@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 
 const ProductSchema=new mongoose.Schema({
-    _id:{
+    _id: {
         type: String,
         required: true
     },
@@ -22,14 +22,17 @@ const ProductSchema=new mongoose.Schema({
         required: true,
     },
     KhuyenMai: [{
-        tenKM: String,
+        _id: false,
+        type: String,
     }],
     QuaKhuyenMai: [{
+        _id: false,
         TenQuaKM: String,
         HinhKhuyenMai: String,
     }],
     PhuKien: [{
-        tenPhukien: String
+        _id: false,
+        type: String
     }],
     BaoHanh: {
         type: Number,
