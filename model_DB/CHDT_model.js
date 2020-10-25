@@ -5,7 +5,7 @@ const DienThoai_CHSchema=new mongoose.Schema({
         type: String,
         required: true
     },
-    Manhinh: {
+    ManHinh: {
         type: String,
         required: true
     },

@@ -20,24 +20,24 @@
     </section>
     <section class="contentDashboard">
         <ul class="tables">
-            <li><a href="#">Bang 1</a></li> 
-            <li><a href="#">Bang 1</a></li>
-            <li><a href="#">Bang 1</a></li>
-            <li><a href="#">Bang 1</a></li>
-            <li><a href="#">Bang 1</a></li>
-            <li><a href="#">Bang 1</a></li>
+            <li><a href="#">Dien Thoai</a></li> 
+            <li><a href="#">LapTop</a></li>
+            <li><a href="#">Tablet</a></li>
+            <li><a href="#">Accessories Mobile</a></li>
+            <li><a href="#">DeskTop</a></li>
+            <li><a href="#">Accessories Desktop</a></li>
         </ul>
         <div class="controlData">
             <ul class="listFieldName">
+                <!-- <li>Fieldname1 </li>
                 <li>Fieldname1 </li>
                 <li>Fieldname1 </li>
                 <li>Fieldname1 </li>
                 <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
+                <li>Fieldname1 </li> -->
             </ul>
             <ul class="listData">
-                <li>
+                <!-- <li>
                     <a herf="#">
                         <ul class="listField">
                             <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
@@ -120,7 +120,7 @@
                             <li>Fieldname1 </li>
                         </ul>
                     </a>
-                </li>
+                </li> -->
             </ul>
         </div>
     </section>
@@ -139,7 +139,15 @@
                     <label>Gia giam:</label>
                     <input type="text" name="giagiam" placeholder="vd: -2000000" required>
                 </li>
-                <li style="border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px;grid-row: 1/3">
+                <li style="grid-row: 1">
+                    <label>So Luong:</label>
+                    <input type="number" name="soluong" placeholder="vd: 100" min=1 required>
+                </li>
+                <li style="border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px;">
+                    <label style="margin-bottom: 0;">Mo ta:</label>
+                    <input type="file" name="mota" placeholder="Chon file text mo ta" style="border:none" required>
+                </li>
+                <li style="grid-column: 1/3;grid-row: 2/4;border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px">
                     <label>Hinh anh san pham:</label>
                     <input type="file" name="hinhsp" placeholder="Chon hinh" multiple required>
                     <ul class="listHinhAnh">
@@ -179,11 +187,6 @@
                         <li>Op lung</li> -->
                     </ul>
                 </li>
-                <li style="border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px;">
-                    <label>Mo ta:</label>
-                    <input type="file" name="mota" placeholder="Chon file text mo ta" style="margin-bottom: .5rem;" required>
-                    <span>file.html</span>
-                </li>
                 <li>
                     <label>Bao hanh:</label>
                     <select id="baohanh" name="baohanh">
@@ -197,13 +200,13 @@
                     <label>Thuong hieu:</label>
                     <input type="text" name="thuonghieu" placeholder="vd: XiaoMi" required>
                 </li>
-                <li>
+                <li style="grid-column: 3"> 
                     <label>Danh muc:</label>
                     <input type="text" name="danhmuc" placeholder="vd: Dienthoai" required>
                 </li>
                 <li class="btns_controlForm">
                     <button class="submit">Cap nhap</button>
-                    <button>Thoat</button>
+                    <button class="hide">Thoat</button>
                 </li>
             </ul>
         </form>

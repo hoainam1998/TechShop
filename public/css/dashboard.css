@@ -17,6 +17,10 @@ body {
     font-family: 'Open Sans', sans-serif;;
 }
 
+:root {
+    --selectColor: #ecf0f1;
+}
+
 /*====================================
         Header Dashboard
 ====================================*/
@@ -41,12 +45,36 @@ body {
     display: block;
     padding: .8rem .5rem;
     color: white;
+    font-size: 14px;
 }
 
 .tables li a::before {
     font-family: 'FontAwesome';
-    content: '\f0ce';
     margin-right: .5rem;
+}
+
+.tables li:first-child a::before {
+    content: '\f3cd';
+}
+
+.tables li:nth-child(2) a::before {
+    content: '\f109';
+}
+
+.tables li:nth-child(3) a::before {
+    content: '\f3fa';
+}
+
+.tables li:nth-child(4) a::before {
+    content: '\f58f';
+}
+
+.tables li:nth-child(5) a::before {
+    content: '\f108';
+}
+
+.tables li:nth-child(6) a::before {
+    content: '\f8cc';
 }
 
 .tables li {
@@ -64,6 +92,7 @@ body {
     font-size: 16px;
     background: transparent;
     cursor: pointer;
+    outline: none;
 }
 
 .search input {
@@ -124,10 +153,19 @@ body {
 .listData >li {
     padding: .3rem 0;
     cursor: pointer;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.listData >li a {
+    color: black;
 }
 
 .listData li:hover {
     background: #ecf0f1;
+}
+
+.selectAllDataitem {
+    background: var(--selectColor);
 }
 
 .listFieldName {
@@ -138,14 +176,41 @@ body {
 
 .listFieldName li{
     font-weight: bold;
+    font-size: 14px;
 }
 
 .listField,.listFieldName {
     display: grid;
-    grid-template-columns: 100px repeat(5,1fr);
+    grid-template-columns: 100px repeat(6,1fr);
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.listField li button {
+    color: #2ecc71;
+    font-size: 22px;
+    background: transparent;
+    outline: none;
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+    padding: .3rem;
+    cursor: pointer;
+}
+
+.listField li button:hover {
+    border-color:#2c3e50;
+    background: white;
+}
+
+.listField li button:first-child::before {
+    font-family: 'FontAwesome';
+    content: '\f518';
+}
+
+.listField li button:last-child::after{
+    font-family: 'FontAwesome';
+    content: '\f044';
 }
 
 .listField li img {
@@ -154,11 +219,17 @@ body {
 }
 
 #baohanh {
-    width: 100%; height: 60%;
+    width: 100%; height: 40px;
     border-radius: 4px;
     outline: none;
     padding: 0 .5rem;
 }
+
+.listField li:nth-child(2){
+    text-align: left;
+    text-transform: capitalize;
+}
+
 /*====================================
         End Control Data
 ====================================*/
@@ -182,8 +253,8 @@ body {
     width: 95%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: 15% 34% 34% 15%;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: 15% 50% 15% 15%;
     grid-gap: 10px;
 }
 
@@ -220,7 +291,7 @@ body {
 }
 
 .listDiscountGift {
-    height: 180px;
+    height: 260px;
     overflow-y: scroll;
 }
 
@@ -247,10 +318,10 @@ body {
 .listHinhAnh {
     margin: .5rem 0;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-    grid-gap: 10px;
-    grid-auto-rows: 125px;
-    height: 140px;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 7px;
+    grid-auto-rows: 130px;
+    height: 245px;
     overflow-y: scroll;
 }
 

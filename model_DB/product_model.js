@@ -1,19 +1,20 @@
 const mongoose=require('mongoose');
 
 const ProductSchema=new mongoose.Schema({
-    _id: {
-        type: String,
-        required: true
-    },
     TenSP: {
         type: String,
-        required: true
+        required: true,
+        text: true
     },
     Gia: {
         type: Number,
         required: true
     },
     GiaGiam: {
+        type: Number,
+        required: true
+    },
+    SoLuong: {
         type: Number,
         required: true
     },
