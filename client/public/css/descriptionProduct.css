@@ -1,0 +1,82 @@
+
+.listSliderDescription .owl-nav {
+    position: absolute;
+    top: 50%; left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+}
+
+.listSliderDescription .owl-nav button {
+    position: absolute;
+    background: black !important;
+    opacity: .4;
+    border: none;
+    outline: none;
+}
+
+.listSliderDescription .owl-nav button span {
+    font-size: 50px;
+    border: none;
+}
+
+.listSliderDescription .owl-nav button:hover span {
+    color: black !important;
+}
+
+.listSliderDescription .owl-nav button:first-child {
+    left: 0;
+}
+
+.listSliderDescription .owl-nav button:last-child {
+    right: 0;
+}
+
+.owl-dots .active span{
+    background: var(--iconcolor) !important;
+}
+
+.listSliderDescription li:first-child {
+    position: relative;
+}
+
+.iconYt {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70px !important;
+}
+
+.headDescription {
+    margin: 1.5rem 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.5rem;
+}
+
+.listContentDescription img {
+    width: 100%;
+}
+
+.listContentDescription h3 {
+    font-size: 19px;
+    margin-top: 1.5rem;
+}
+
+.listContentDescription p {
+    margin: .7rem 0;
+    line-height: 1.5rem;
+}
+
+.description a {
+    color: var(--linkcolor);
+}
+
+.ytplay {
+    cursor: pointer;
+}
+
+.videoshow iframe {
+    width: 100% !important;
+    height: 100% !important;
+}
+

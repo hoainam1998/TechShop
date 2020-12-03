@@ -1,0 +1,236 @@
+.buyMore {
+    margin: 1rem 0 1rem 1rem;
+    display: block;
+    color: var(--linkcolor);
+    font-size: 14px;
+}
+
+.buyMore::before {
+    font-family: 'FontAwesome';
+    content: '\f053';
+    margin-right: .5rem;
+}
+
+.layoutCart {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    box-shadow: 0 0 20px rgba(0,0,0,.15);
+    margin: 0 1rem;
+}
+
+.layoutCart >div {
+    border: 1px solid #ebebeb;
+}
+
+.pay {
+    padding: .5rem 1.5rem;
+}
+
+.pay div {
+    padding: .5rem 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+.needPay span:last-child {
+    color: #bf081f;
+    font-weight: bold;
+    font-size: 16.5px;
+}
+/*===================================
+            List Cart
+===================================*/
+
+.listCart {
+    padding: 1rem;
+    list-style-type: none;
+}
+
+.listCart >li {
+    display: grid;
+    grid-template-columns: 1fr 4fr 2fr;
+    padding: .5rem 0;
+    border-bottom: 1.5px solid #ebebeb;
+}
+
+.listCart img {
+    width: 100px;
+}
+
+
+.listDiscount {
+    font-size: 14px;
+    color: #333;
+}
+
+.listDiscount li::before {
+    font-size: 20px;
+    color: #666;
+    margin-right: .5rem;
+    vertical-align: middle;
+}
+
+.quantity_color_remove {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+}
+
+.cart_price > .newPrice { margin-right: 11px;}
+
+.btn-controlQuantity {
+    display: flex;
+}
+
+.btn-controlQuantity button {
+    border: none;
+    width: 35px; height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-controlQuantity span {
+    border: 1px solid #ebebeb;
+    width: 35px; height: 30px;
+    text-align: center;
+    padding-top: .3rem;
+}
+
+.remove {
+    color: #666;
+}
+
+.remove::before {
+    font-family: 'FontAwesome';
+    content: '\f057';
+    font-size: 14px;
+    margin-right: .3rem;
+}
+/*===================================
+        End List Cart
+===================================*/
+
+/*===================================
+        Infor Customer
+===================================*/
+
+.inforCustomer {
+    padding: 1rem;
+}
+
+.name_tel_note {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+    margin: .4rem 0;
+}
+
+.name_tel_note input {
+    padding: .5rem;
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+}
+
+.name_tel_note input:last-child {
+    grid-column: 1/3; 
+}
+
+.deliveryAddress {
+    padding: 1rem;
+    background: #f0f0f0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 10px;
+}
+
+.deliveryAddress select,
+.deliveryAddress input {
+    padding: .5rem;
+    border: 1.5px solid #ebebeb;
+    border-radius: 4px;
+}
+
+.inforCustomer form button[type="submit"] {
+    display: block;
+    color: var(--linkcolor);
+    font-size: 16px;
+    background: white;
+    border: 1.5px solid var(--linkcolor);
+    margin: 1rem auto;
+    width: 200px; height: 40px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.name_discount > a {
+    color: var(--linkcolor);
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.noItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.noItem img {
+    width: 100px;
+}
+
+.noItem h3 {
+    text-transform: uppercase;
+    margin-top: 1rem;
+    color: #2ecc71;
+    text-align: center;
+}
+
+/*===================================
+        End Infor Customer
+===================================*/
+
+@media(max-width: 768px){
+    .layoutCart {
+        grid-template-columns: 100%;
+    }
+
+    .listCart {
+        padding-bottom: 0;
+    }
+}
+
+@media(max-width: 767px){
+    .layoutCart {
+        margin: 0;
+    }
+
+    .listCart li {
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+        align-items: center;
+    } 
+
+    .quantity_color_remove {
+       grid-template-columns: repeat(2,1fr);
+       align-items: center;
+       padding: 0 .5rem;
+    }
+
+    .inforCustomer {
+        padding: .5rem;
+    }
+
+    .name_tel_note {
+        grid-template-columns: repeat(2,48.5%);
+    }
+
+    .deliveryAddress {
+        grid-gap: 5px;
+        padding: .5rem;
+        grid-template-columns: repeat(2,49.5%);
+    }
+}
+
+

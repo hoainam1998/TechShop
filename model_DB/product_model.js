@@ -54,6 +54,10 @@ const ProductSchema=new mongoose.Schema({
     DanhMuc: {
         type: String,
         required: true
+    },
+    NoiBat: {
+        type: Boolean,
+        required: true
     }
 })
 

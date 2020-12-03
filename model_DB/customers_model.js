@@ -1,10 +1,6 @@
 const mongoose=require("mongoose");
 
 const Customers_Chema=new mongoose.Schema({
-    _id: {
-        type: String,
-        required: true
-    },
     HoTen: {
         type: String,
         required: true

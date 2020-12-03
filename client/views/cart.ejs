@@ -1,0 +1,52 @@
+<main>
+    <a href="/" class="buyMore">Mua them san pham khac</a>
+    <section class="layoutCart">
+        <div class="carts" >
+            <ul class="listCart">
+
+            </ul>
+            <div class="pay">
+                <div class="needPay">
+                    <span>Can thanh toan: </span>
+                    <span>20.000.000d</span>
+                </div>
+            </div>
+        </div>
+        <div class="inforCustomer">
+            <form method="POST">
+                <input type="radio" name="gender" value="Anh">
+                <label style="margin-right: 1rem;">Anh</label>
+                <input type="radio" name="gender" value="Chi">
+                <label>Chi</label>
+                <div class="name_tel_note">
+                    <input type="text" name="nameCustomer" placeholder="Ho va ten">
+                    <input type="tel" name="phone" pattern="[0]{1}[0-9]{3}[0-9]{3}[0-9]{3}" placeholder="SDT">
+                    <input type="text" name="note" value='' placeholder="Yeu cau khac(khong bat buoc)">
+                </div>
+                <div class="deliveryAddress">
+                    <select id="province">
+                       
+                    </select>
+                    <select id="district">
+                        
+                    </select>
+                    <select id="village">
+                        
+                    </select>
+                    <input type="text" name="detailAddress" placeholder="So nha ,ten duong">
+                </div>
+                <button type="submit" id="dathang">Dat hang</button>
+            </form>
+        </div>
+    </section>
+    <section class="noItem" style="display: none">
+        <img src="/images/shopping-cart.svg" alt="cart">
+        <h3>Khong co san pham nao trong gio hang</h3>
+    </section>
+    <section class="payment_success note" style="display: none">
+        <div class="content">
+            <img src="/images/checked.svg" alt="checked">
+            <h4>Cam on ban da mua sam tai cua hang. Chung toi se lien he voi ban trong 15 phut toi.</h4>
+        </div>
+    </section>
+</main>

@@ -1,7 +1,7 @@
 const express=require('express');
 const route=express.Router();
 
-route.get('/dashboard',(req,res)=>{
+route.get('/',(req,res)=>{
     res.render('CRUD_dashboard.ejs');
 })
 

@@ -6,7 +6,7 @@
             <span>|</span>
             <i class="fas fa-trash"></i>
             <span>|</span>
-            <i class="far fa-plus-square"></i>
+            <i class="far fa-plus-square" id="openFormCreate"></i>
         </div>
         <div class="search">
             <input type="text" name="search" placeholder="Nhap ten san pham">
@@ -20,112 +20,34 @@
     </section>
     <section class="contentDashboard">
         <ul class="tables">
-            <li><a href="#">Dien Thoai</a></li> 
-            <li><a href="#">LapTop</a></li>
-            <li><a href="#">Tablet</a></li>
-            <li><a href="#">Accessories Mobile</a></li>
-            <li><a href="#">DeskTop</a></li>
-            <li><a href="#">Accessories Desktop</a></li>
+            <li><a href="/?danhmuc=smartphone">Dien Thoai</a></li>
+            <li><a href="/?danhmuc=laptop">LapTop</a></li>
+            <li><a href="/?danhmuc=tablet">Tablet</a></li>
+            <li><a href="/?danhmuc=tainghe">Tai Nghe</a></li>
+            <li><a href="/?danhmuc=pc">PC</a></li>
+            <li><a href="/?danhmuc=manhinh">Man Hinh</a></li>
         </ul>
         <div class="controlData">
             <ul class="listFieldName">
-                <!-- <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
-                <li>Fieldname1 </li>
-                <li>Fieldname1 </li> -->
+                <li>Hinh Anh</li>
+                <li>Ten SP </li>
+                <li>Gia </li>
+                <li>Gia Giam </li>
+                <li>So Luong</li>
+                <li>Bao Hanh </li>
             </ul>
             <ul class="listData">
-                <!-- <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li>
-                <li>
-                    <a herf="#">
-                        <ul class="listField">
-                            <li><img src="/images/samsung-galaxy-s10-lite.jpg" alt="imgProduct"> </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                            <li>Fieldname1 </li>
-                        </ul>
-                    </a>
-                </li> -->
+                <!-- 
+                    render from server
+                -->
             </ul>
         </div>
+        <ul class="pagination">
+            <!-- render from server-->
+        </ul>
     </section>
     <section class="detailItemData">
-        <form id="dashboardForm"enctype="multipart/form-data">
+        <form id="dashboardForm" enctype="multipart/form-data">
             <ul class="listInput">
                 <li style="grid-row: 1">
                     <label>TenSP:</label>
@@ -147,7 +69,8 @@
                     <label style="margin-bottom: 0;">Mo ta:</label>
                     <input type="file" name="mota" placeholder="Chon file text mo ta" style="border:none" required>
                 </li>
-                <li style="grid-column: 1/3;grid-row: 2/4;border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px">
+                <li
+                    style="grid-column: 1/3;grid-row: 2/4;border: 1.5px solid #ebebeb; padding: .5rem; border-radius: 5px">
                     <label>Hinh anh san pham:</label>
                     <input type="file" name="hinhsp" placeholder="Chon hinh" multiple required>
                     <ul class="listHinhAnh">
@@ -172,7 +95,7 @@
                         <input type="text" name="tenquakm" placeholder="vd: Tai nghe Sony..." required>
                         <i class="far fa-plus-square addnameDiscount"></i>
                     </div>
-                    <ul class="listDiscountGift">
+                    <ul id="listDiscountGift">
                         <!-- render from dashboard.js-->
                     </ul>
                 </li>
@@ -180,7 +103,7 @@
                     <label>Phu kien:</label>
                     <input type="text" name="phukien" placeholder="vd: Sac..." required>
                     <button class="addAccessories add">Them</button>
-                    <ul class="accessories styleOfList" id="listphukien">
+                    <ul class="styleOfList" id="listphukien">
                         <!-- <li>Sac</li>
                         <li>Tai nghe</li>
                         <li>Sach huong dan su dung</li>
@@ -200,12 +123,315 @@
                     <label>Thuong hieu:</label>
                     <input type="text" name="thuonghieu" placeholder="vd: XiaoMi" required>
                 </li>
-                <li style="grid-column: 3"> 
-                    <label>Danh muc:</label>
-                    <input type="text" name="danhmuc" placeholder="vd: Dienthoai" required>
+                <li>
+                    <label>Noi bat:</label>
+                    <div style="display: flex; align-items: center;margin-top: 1.2rem;">
+                        <input type="checkbox" name="noibat" style="width: auto; margin-right: 1rem" value="false">
+                        <span style="cursor: pointer">Noi bat</span>
+                    </div>
+                </li>
+                <!-- dienthoai- cau hinh -->
+                <li class="smartphone_ch_input">
+                    <label>Man hinh:</label>
+                    <input type="text" name="manhinh" placeholder="vd: FPS 6.0 FullHD" required>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>HDH:</label>
+                    <select name='hdh'>
+                        <option value="Androi 10">Androi 10</option>
+                        <option value="Androi 9">Androi 9</option>
+                        <option value="iOS 13">iOS 13</option>
+                        <option value="iOS 12">iOS 12</option>
+                    </select>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>Camera sau:</label>
+                    <input type="text" name="camerasau" placeholder="vd: 8" required>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>Camera truoc:</label>
+                    <input type="text" name="cameratruoc" placeholder="vd: 20" required>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>CPU:</label>
+                    <input type="text" name="cpu" placeholder="vd: Snapdragon 875" required>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>RAM:</label>
+                    <select name="ram" required>
+                        <option value="3 GB">3 GB</option>
+                        <option value="4 GB">4 GB</option>
+                        <option value="6 GB">6 GB</option>
+                        <option value="8 GB">8 GB</option>
+                        <option value="12 GB">12 GB</option>
+                    </select>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>Bo nho trong:</label>
+                    <select name="bonhotrong" required>
+                        <option value="32 GB">32 GB</option>
+                        <option value="64 GB">64 GB</option>
+                        <option value="128 GB">128 GB</option>
+                        <option value="256 GB">256 GB</option>
+                    </select>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>The nho:</label>
+                    <select name="thenho">
+                        <option value="16 GB">16 GB</option>
+                        <option value="32 GB">32 GB</option>
+                        <option value="128 GB">128 GB</option>
+                        <option value="256 GB">256 GB</option>
+                        <option value="512 GB">512 GB</option>
+                        <option value="1 TB">1 TB</option>
+                    </select>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>The sim:</label>
+                    <select name="thesim" required>
+                        <option value="1 sim nano">1 sim</option>
+                        <option value="2 sim nano">2 sim</option>
+                    </select>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>Dung luong pin:</label>
+                    <input type="text" name="dungluongpin" placeholder="vd: 5000" required>
+                </li>
+                <li class="smartphone_ch_input">
+                    <label>Chat lieu:</label>
+                    <input type="text" name="chatlieu" placeholder="vd: Kinh Nhom" required>
+                </li>
+                <!-- dienthoai - cauhinh -->
+
+                <!-- laptop - cauhinh -->
+                <li class="laptop_ch_input">
+                    <label>CPU:</label>
+                    <select name="laptop_cpu">
+                        <option value="Intel Core i3">Intel Core i3</option>
+                        <option value="Intel Core i5">Intel Core i5</option>
+                        <option value="Intel Core i7">Intel Core i7</option>
+                        <option value="AMD Ryzen 3">AMD Ryzen 3</option>
+                        <option value="AMD Ryzen 5">AMD Ryzen 5</option>
+                        <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+                    </select>
+                </li>
+                <li class="laptop_ch_input">
+                    <label>RAM:</label>
+                    <input type="text" name="laptop_ram" placeholder="8GB 2600HZ" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>O Cung:</label>
+                    <input type="text" name="laptop_ocung" placeholder="1TB 7500" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>Man hinh:</label>
+                    <input type="text" name="laptop_manhinh" placeholder="1080 * 1020 FullHD" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>Card man hinh:</label>
+                    <input type="text" name="laptop_cardmanhinh" placeholder="Gefore 1080" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>Cong ket noi:</label>
+                    <input type="text" name="laptop_congketnoi" placeholder="USB type C" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>He dieu hanh:</label>
+                    <input type="text" name="laptop_hedieuhanh" placeholder="Window 10 Home" />
+                </li>
+                <li class="laptop_ch_input">
+                    <label>Thiet ke:</label>
+                    <input type="text" name="laptop_thietke" placeholder="Kim loai, Pin lien" />
+                </li>
+
+                <!-- End Laptop cauhinh -->
+
+                <!-- TaiNghe cauhinh -->
+                <li class="tainghe_ch_input">
+                    <label>Bluetooth:</label>
+                    <div style="display: flex; align-items: center;">
+                        <div style="display: flex; align-items: center;margin-right: 1rem;">
+                            <input type="radio" name="bluetooth" value="false"
+                                style="width: auto; margin-right: .3rem;" id="bluetooth">
+                            <span>Bluetooth</span>
+                        </div>
+                        <div style="display: flex; align-items: center;">
+                            <input type="radio" name="bluetooth" value="false"
+                                style="width: auto; margin-right: .3rem;" id="coday">
+                            <span>Co day</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="tainghe_ch_input">
+                    <label>Do dai day:</label>
+                    <input type="text" name="dodaiday" placeholder="vd: 1.2m">
+                </li>
+                <li class="tainghe_ch_input">
+                    <label>CongSac:</label>
+                    <select name="congsac">
+                        <option value="USB Type C">USB Type C</option>
+                        <option value="Micro USB">Micro USB</option>
+                    </select>
+                </li>
+                <li class="tainghe_ch_input">
+                    <label>CongNghe:</label>
+                    <input type="text" name="congngheamthanh" placeholder="vd: ExtraBass">
+                    <button class="add addSoundTech">Them</button>
+                    <ul class="styleOfList" id="listSoundTech">
+                        <!-- <li>ExtraBass<i class="far fa-times-circle"></i></li> -->
+                    </ul>
+                </li>
+                <li class="tainghe_ch_input">
+                    <label>KetNoiCungLuc:</label>
+                    <select name="ketnoicungluc">
+                        <option value="1 thiet bi">1 Thiet bi</option>
+                        <option value="2 thiet bi">2 Thiet bi</option>
+                    </select>
+                </li>
+                <li class="tainghe_ch_input" style="grid-column:3/5">
+                    <label>Phim dieu khien:</label>
+                    <ul id="listFeatureInput" class="listCheckbox">
+                        <li>
+                            <input type="checkbox" name="mic" value="Mic thoai">
+                            <span>Mic thoai</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="nghenhan" value="Nghe/nhan cuoc goi">
+                            <span>Nghe nhan cuoc goi</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="phatdung" value="Phat/dung choi nhac">
+                            <span>Phat/dung choi nhac</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="chuyenbai" value="Chuyen bai hat">
+                            <span>Chuyen bai hat</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" name="amluong" value="Tang/giam am luong">
+                            <span>Tang giam am luong</span>
+                        </li>
+                    </ul>
+                </li>
+                <!-- End Tainghe - cauhinh -->
+
+                <!-- Manhinh - cauhinh -->
+                <li class="manhinh_ch_input">
+                    <label>Loai man hinh:</label>
+                    <select name="loaimanhinh">
+                        <option value="phang">Phang</option>
+                        <option value="cong">Cong</option>
+                        <option value="guong">Guong</option>
+                        <option value="chongchoi">Chong choi</option>
+                    </select>
+                </li>
+                <li class="manhinh_ch_input">
+                    <label>Do sang:</label>
+                    <select name="dosang">
+                        <option value="250cd/m2">250cd/m2</option>
+                        <option value="300cd/m2">300cd/m2</option>
+                        <option value="350cd/m2">350cd/m2</option>
+                    </select>
+                </li>
+                <li class="manhinh_ch_input">
+                    <label>Thoi gian dap ung:</label>
+                    <select name="thoigiandapung">
+                        <option value="0.5m/s">0.5m/s</option>
+                        <option value="1m/s">1m/s</option>
+                        <option value="4m/s">4m/s</option>
+                        <option value="5m/s">5m/s</option>
+                    </select>
+                </li>
+                <li class="manhinh_ch_input" style="grid-column: 2/4">
+                    <label>Cong ket noi:</label>
+                    <ul id="listConnectPortInput" class="listCheckbox">
+                        <li>
+                            <input type="checkbox" value="Display Port">
+                            <span>Display Port</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="1 HDMI">
+                            <span>1 HDMI</span>
+                        </li>
+                        <li>
+                            <input type="checkbox" value="2 HDMI">
+                            <span>2 HDMI</span>
+                        </li>
+                    </ul>
+                </li>
+                <li class="manhinh_ch_input">
+                    <label>Tan so quet:</label>
+                    <select name="tansoquet">
+                        <option value="280HZ">280HZ</option>
+                        <option value="165HZ">165HZ</option>
+                        <option value="144HZ">144HZ</option>
+                        <option value="75HZ">75HZ</option>
+                    </select>
+                </li>
+
+                <li class="manhinh_ch_input">
+                    <label>Tien ich:</label>
+                    <input type="text" name="tienich" placeholder="vd: Co loa tich hop">
+                </li>
+
+                <li class="manhinh_ch_input">
+                    <label>Cong Nghe:</label>
+                    <input type="text" name="congnghe" placeholder="vd: asyncscreen">
+                    <button class="add addScreenTech">Them</button>
+                    <ul class="styleOfList" id="listScreenTech">
+                        <!-- <li>ExtraBass<i class="far fa-times-circle"></i></li> -->
+                    </ul>
+                </li>
+                <li class="manhinh_ch_input">
+                    <label>Kich thuoc:</label>
+                    <ul class="listKichthuoc">
+                        <li>
+                            <span>Ngang:</span>
+                            <input type="number" name="ngang" min="0" max="200">
+                        </li>
+                        <li>
+                            <span>Day:</span>
+                            <input type="number" name="day" min="0" max="100">
+                        </li>
+                        <li>
+                            <span>Cao:</span>
+                            <input type="number" name="cao" min="0" max="100">
+                        </li>
+                    </ul>
+                </li>
+                <!-- End Manhinh - cauhinh -->
+
+                <li class="pc_ch_input">
+                    <label>CPU:</label>
+                    <input type="text" name="pc_cpu" placeholder="vd: Intel Core i5 Coffee Lake">
+                </li>
+                <li class="pc_ch_input">
+                    <label>RAM:</label>
+                    <input type="text" name="pc_ram" placeholder="vd: 4GB, DDR4">
+                </li>
+                <li class="pc_ch_input">
+                    <label>OCung:</label>
+                    <input type="text" name="pc_ocung" placeholder="vd: O cung">
+                </li>
+                <li class="pc_ch_input">
+                    <label>Card man hinh:</label>
+                    <input type="text" name="pc_cardmanhinh" placeholder="vd: Intel® UHD Graphics 630">
+                </li>
+                <li class="pc_ch_input">
+                    <label>Giao tiep mang:</label>
+                    <input type="text" name="pc_giaotiepmang" placeholder="vd: WiFi, Bluetooth® 5.0">
+                </li>
+                <li class="pc_ch_input">
+                    <label>He dieu hanh:</label>
+                    <input type="text" name="pc_hedieuhanh" placeholder="vd: Windows 10">
+                </li>
+                <li class="pc_ch_input">
+                    <label>O Dia Quang:</label>
+                    <input type="text" name="pc_odiaquang" placeholder="vd: DVDRW">
                 </li>
                 <li class="btns_controlForm">
-                    <button class="submit">Cap nhap</button>
+                    <button class="create">Them</button>
+                    <button class="update" style="display: none;">Cap nhap</button>
                     <button class="hide">Thoat</button>
                 </li>
             </ul>
